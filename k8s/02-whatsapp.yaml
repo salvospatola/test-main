@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whatsapp-gateway
+  namespace: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whatsapp-gateway
+  strategy:
+    type: Recreate  # WICHTIG: Killt alten Pod bevor neuer startet (Anti-Double-Login)
+  template:
+    metadata:
+      labels:
+        app: whatsapp-gateway
+    spec:
+      imagePullSecrets:
+      - name: ghcr-auth
+      containers:
+      - name: whatsapp
+        image: ghcr.io/marcel/efg-nsu-portal:latest
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "256Mi"
+          limits:
+            cpu: "200m"
+            memory: "512Mi"
+        env:
+        - name: ENABLE_API
+          value: "false"
+        - name: ENABLE_WHATSAPP
+          value: "true"
+        - name: ENABLE_SCHEDULER
+          value: "false"
+        envFrom:
+        - secretRef:
+            name: api-secrets
+        volumeMounts:
+        - name: auth-data
+          mountPath: /app/auth_info
+      volumes:
+      - name: auth-data
+        hostPath:
+          path: /data/whatsapp/auth_info
+          type: DirectoryOrCreate

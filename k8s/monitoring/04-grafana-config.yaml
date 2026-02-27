@@ -1,0 +1,118 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-config
+  namespace: monitoring
+data:
+  datasources.yaml: |
+    apiVersion: 1
+    datasources:
+    - name: Loki
+      type: loki
+      uid: loki
+      url: http://loki:3100
+      access: proxy
+      isDefault: true
+    - name: Prometheus
+      type: prometheus
+      uid: prometheus
+      url: http://prometheus:9090
+      access: proxy
+  dashboards.yaml: |
+    apiVersion: 1
+    providers:
+    - name: 'PortalDashboards'
+      orgId: 1
+      folder: 'Portal'
+      type: file
+      disableDeletion: false
+      editable: true
+      options:
+        path: /etc/grafana/provisioning/dashboards
+  security-traffic.json: |
+    {
+      "editable": true,
+      "panels": [
+        {
+          "title": "System Health",
+          "type": "stat",
+          "gridPos": { "h": 4, "w": 24, "x": 0, "y": 0 },
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
+          "targets": [
+            { "expr": "sum(kube_pod_status_ready{condition=\"true\", namespace=\"prod\"})", "legendFormat": "Pods Ready", "refId": "A" }
+          ],
+          "fieldConfig": { 
+            "defaults": { 
+              "color": { "mode": "thresholds" }, 
+              "thresholds": { 
+                "mode": "absolute", 
+                "steps": [
+                  { "color": "red", "value": null }, 
+                  { "color": "yellow", "value": 2 }, 
+                  { "color": "green", "value": 4 }
+                ] 
+              } 
+            } 
+          }
+        },
+        {
+          "title": "Nginx Live Traffic",
+          "type": "logs",
+          "gridPos": { "h": 12, "w": 12, "x": 0, "y": 4 },
+          "datasource": { "type": "loki", "uid": "loki" },
+          "targets": [
+            { 
+              "expr": "{job=\"nginx-traffic\"} | json | line_format \"[{{status}}] {{request_method}} {{request_uri}} - {{remote_addr}}\"", 
+              "refId": "A" 
+            }
+          ],
+          "options": { 
+            "showTime": true, 
+            "sortOrder": "Descending",
+            "wrapLogLines": true,
+            "enableLogDetails": true
+          }
+        },
+        {
+          "title": "App Logs (Filtered)",
+          "type": "logs",
+          "gridPos": { "h": 12, "w": 12, "x": 12, "y": 4 },
+          "datasource": { "type": "loki", "uid": "loki" },
+          "targets": [
+            { 
+              "expr": "{namespace=\"prod\"} !~ \"(?i)health|pulse\"", 
+              "refId": "A" 
+            }
+          ],
+          "options": { 
+            "showTime": true, 
+            "sortOrder": "Descending",
+            "wrapLogLines": true,
+            "enableLogDetails": true
+          }
+        },
+        {
+          "title": "Resource Overview (CPU %)",
+          "type": "timeseries",
+          "gridPos": { "h": 8, "w": 12, "x": 0, "y": 16 },
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
+          "targets": [
+            { "expr": "sum(rate(container_cpu_usage_seconds_total{namespace=\"prod\"}[5m])) by (pod) * 100", "legendFormat": "{{pod}}", "refId": "A" }
+          ],
+          "fieldConfig": { "defaults": { "unit": "percent" } }
+        },
+        {
+          "title": "Memory Usage (MiB)",
+          "type": "timeseries",
+          "gridPos": { "h": 8, "w": 12, "x": 12, "y": 16 },
+          "datasource": { "type": "prometheus", "uid": "prometheus" },
+          "targets": [
+            { "expr": "sum(container_memory_working_set_bytes{namespace=\"prod\"}) by (pod)", "legendFormat": "{{pod}}", "refId": "A" }
+          ],
+          "fieldConfig": { "defaults": { "unit": "decbytes" } }
+        }
+      ],
+      "schemaVersion": 38,
+      "title": "Portal 360° Overview",
+      "uid": "portal-overview"
+    }

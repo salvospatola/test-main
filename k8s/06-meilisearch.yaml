@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: meilisearch
+  namespace: prod
+spec:
+  serviceName: "meilisearch"
+  replicas: 1
+  selector:
+    matchLabels:
+      app: meilisearch
+  template:
+    metadata:
+      labels:
+        app: meilisearch
+    spec:
+      securityContext:
+        fsGroup: 1000
+      containers:
+      - name: meilisearch
+        image: getmeili/meilisearch:v1.12
+        ports:
+        - containerPort: 7700
+        env:
+        - name: MEILI_MASTER_KEY
+          valueFrom:
+            secretKeyRef:
+              name: api-secrets
+              key: MEILI_MASTER_KEY
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "128Mi"
+          limits:
+            cpu: "200m"
+            memory: "256Mi"
+        volumeMounts:
+        - name: meili-data
+          mountPath: /meili_data
+      volumes:
+      - name: meili-data
+        hostPath:
+          path: /data/portal/meilisearch
+          type: DirectoryOrCreate
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: meilisearch
+  namespace: prod
+spec:
+  ports:
+  - port: 7700
+  selector:
+    app: meilisearch

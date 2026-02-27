@@ -1,0 +1,2331 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\playwright.config.js",
+    "rootDir": "C:/Users/Marcel/Desktop/whatsapp-bot/src/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Marcel/Desktop/whatsapp-bot/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Marcel/Desktop/whatsapp-bot/src/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": {
+      "command": "npm start",
+      "port": 3001,
+      "env": {
+        "PORT": "3001",
+        "MONGODB_URI": "mongodb://localhost:27017/efg-nsu-portal-test",
+        "NODE_ENV": "test"
+      },
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "blank_screen_check.spec.js",
+      "file": "blank_screen_check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Blank Screen & JS Error Check",
+          "file": "blank_screen_check.spec.js",
+          "line": 18,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Route \"/\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35058,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:46:42.676Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-a52b08c816671d95b1fa",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/dienstplaner\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35056,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:47:19.069Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-804fb80ea64efcf20dc0",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/admin\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35063,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:47:55.586Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-a3213fd7421170c8f4bb",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/admin/users\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35040,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:48:32.024Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-149c370831cb4ab16bd4",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/admin/roles\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35058,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:49:08.392Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-a2a7e31890661a53071b",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/admin/monitor\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35050,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:49:44.827Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-4981395212112c72cb0b",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/admin/stats\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35059,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:50:21.219Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-bbd82e5cdecf9c552ba4",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/admin/security\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35055,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:50:57.566Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-5b69230e21f25f773d9f",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/admin/activity\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35047,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:51:34.063Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-568547a6ac4fa290ef3e",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/admin/bot\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35054,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:52:10.620Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-6a16f9fc5be86b90deb4",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/impressum\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35046,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:52:47.095Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-e135e7041579b7669889",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            },
+            {
+              "title": "Route \"/datenschutz\" should not have JS errors or blank screen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 35060,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                          "column": 10,
+                          "line": 20
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 10,
+                            "line": 20
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 18 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'Blank Screen & JS Error Check'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 19 |\u001b[39m     \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m         \u001b[90m// Mock Login as Admin to access all routes\u001b[39m\n \u001b[90m 22 |\u001b[39m         \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'/api/dev/mock-login'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m         \u001b[36mconst\u001b[39m body \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:20:10\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                            "column": 20,
+                            "line": 26
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m         \u001b[36mconst\u001b[39m token \u001b[33m=\u001b[39m body\u001b[33m.\u001b[39mtoken\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m         \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate((t) \u001b[33m=>\u001b[39m localStorage\u001b[33m.\u001b[39msetItem(\u001b[32m'auth_token'\u001b[39m\u001b[33m,\u001b[39m t)\u001b[33m,\u001b[39m token)\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js:26:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:53:23.637Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\blank_screen_check.spec.js",
+                        "column": 10,
+                        "line": 20
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ad0f4c10f5f51d97f706-9b9979170c38b269abca",
+              "file": "blank_screen_check.spec.js",
+              "line": 31,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "comprehensive.spec.js",
+      "file": "comprehensive.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "EFG NSU Portal - Core UI Tests",
+          "file": "comprehensive.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Branding und Login-Button vorhanden",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30100,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:5:8",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                          "column": 8,
+                          "line": 5
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'EFG NSU Portal - Core UI Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m   |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                            "column": 8,
+                            "line": 5
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe(\u001b[32m'EFG NSU Portal - Core UI Tests'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m   |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:5:8\u001b[22m"
+                        },
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                            "column": 16,
+                            "line": 8
+                          },
+                          "message": "Error: page.waitForLoadState: Test timeout of 30000ms exceeded.\n\n\u001b[0m \u001b[90m  6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   test(\u001b[32m'Branding und Login-Button vorhanden'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:8:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:54:00.191Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\comprehensive-EFG-NSU-Port-b003c--und-Login-Button-vorhanden-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\comprehensive-EFG-NSU-Port-b003c--und-Login-Button-vorhanden-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                        "column": 8,
+                        "line": 5
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "22db194ba5a9c5d8ddb2-b3bd829dbfc9ab2f6546",
+              "file": "comprehensive.spec.js",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "Login-Modal lässt sich öffnen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9017,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_RESET at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_RESET at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:6:16",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                          "column": 16,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                            "column": 16,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_RESET at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:6:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:54:31.664Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\comprehensive-EFG-NSU-Port-8b3f4-gin-Modal-lässt-sich-öffnen-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                        "column": 16,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "22db194ba5a9c5d8ddb2-1e90901dc39c92d41719",
+              "file": "comprehensive.spec.js",
+              "line": 17,
+              "column": 3
+            },
+            {
+              "title": "Dunkelmodus lässt sich umschalten",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2513,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:6:16",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                          "column": 16,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                            "column": 16,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:6:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:54:42.020Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\comprehensive-EFG-NSU-Port-fca45-modus-lässt-sich-umschalten-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                        "column": 16,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "22db194ba5a9c5d8ddb2-40ec8520cb02e6b1d92a",
+              "file": "comprehensive.spec.js",
+              "line": 25,
+              "column": 3
+            },
+            {
+              "title": "Hellmodus lässt sich umschalten",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2561,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:6:16",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                          "column": 16,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                            "column": 16,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:6:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:54:45.872Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\comprehensive-EFG-NSU-Port-08661-modus-lässt-sich-umschalten-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                        "column": 16,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "22db194ba5a9c5d8ddb2-20f72ae624a97db983f0",
+              "file": "comprehensive.spec.js",
+              "line": 36,
+              "column": 3
+            },
+            {
+              "title": "Footer zeigt Versionsnummer an",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2571,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:6:16",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                          "column": 16,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                            "column": 16,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[90m// Länger warten bis die App stabil ist\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'networkidle'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js:6:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:54:49.941Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\comprehensive-EFG-NSU-Port-73d62-ter-zeigt-Versionsnummer-an-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\comprehensive.spec.js",
+                        "column": 16,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "22db194ba5a9c5d8ddb2-2e8a755a6de310455ed4",
+              "file": "comprehensive.spec.js",
+              "line": 51,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dienstplan_delete.spec.js",
+      "file": "dienstplan_delete.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dienstplan Deletion",
+          "file": "dienstplan_delete.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should show confirmation dialog and delete entry",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 199,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:54:54.019Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "a534fae93d76fa50e616-670ab563d5f932f57865",
+              "file": "dienstplan_delete.spec.js",
+              "line": 4,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "roles_matrix.spec.js",
+      "file": "roles_matrix.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Admin: Role Permissions Matrix (E2E)",
+          "file": "roles_matrix.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Sollte Berechtigungen umschalten und speichern können",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 488,
+                      "error": {
+                        "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                        "stack": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\roles_matrix.spec.js:7:41",
+                        "location": {
+                          "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                          "column": 3001,
+                          "line": 1
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                            "column": 3001,
+                            "line": 1
+                          },
+                          "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\u001b[2m    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\u001b[22m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\roles_matrix.spec.js:7:41\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:54:54.358Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\roles_matrix-Admin-Role-Pe-a6ba1-halten-und-speichern-können-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                        "column": 3001,
+                        "line": 1
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ee990cc08f8f3bedf899-cef59eb4a0bc7b1b112d",
+              "file": "roles_matrix.spec.js",
+              "line": 20,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "routing_check.spec.js",
+      "file": "routing_check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Routing & Access Control",
+          "file": "routing_check.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Öffentliche Seiten sollten erreichbar sein",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2577,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/impressum\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/impressum\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/impressum\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/impressum\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js:6:16",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                          "column": 16,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test(\u001b[32m'Öffentliche Seiten sollten erreichbar sein'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/impressum'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Impressum/i\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m     \n \u001b[90m 9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/datenschutz'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                            "column": 16,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/impressum\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/impressum\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test(\u001b[32m'Öffentliche Seiten sollten erreichbar sein'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/impressum'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Impressum/i\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m     \n \u001b[90m 9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/datenschutz'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js:6:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:54:56.224Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\routing_check-Routing-Acce-a9650-ten-sollten-erreichbar-sein-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                        "column": 16,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b593a6aa8ce8ecba0bb0-304caf8f3cbd1f63f41b",
+              "file": "routing_check.spec.js",
+              "line": 5,
+              "column": 3
+            },
+            {
+              "title": "Registrierungsseite sollte Zugriff verweigert zeigen",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2519,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js:14:16",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                          "column": 16,
+                          "line": 14
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   test(\u001b[32m'Registrierungsseite sollte Zugriff verweigert zeigen'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/register'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/verweigert/i\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                            "column": 16,
+                            "line": 14
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/register\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/register\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m   test(\u001b[32m'Registrierungsseite sollte Zugriff verweigert zeigen'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/register'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/verweigert/i\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js:14:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:00.204Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\routing_check-Routing-Acce-e6d9c-e-Zugriff-verweigert-zeigen-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                        "column": 16,
+                        "line": 14
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b593a6aa8ce8ecba0bb0-32b2ff70140c12c938ff",
+              "file": "routing_check.spec.js",
+              "line": 13,
+              "column": 3
+            },
+            {
+              "title": "Dienstplaner sollte für Gäste gesperrt sein",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 20,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2530,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/dienstplaner\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/dienstplaner\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/dienstplaner\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/dienstplaner\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js:19:16",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                          "column": 16,
+                          "line": 19
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Dienstplaner sollte für Gäste gesperrt sein'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/dienstplaner'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/exklusiv/i\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                            "column": 16,
+                            "line": 19
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/dienstplaner\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/dienstplaner\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   test(\u001b[32m'Dienstplaner sollte für Gäste gesperrt sein'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/dienstplaner'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/exklusiv/i\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 22 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js:19:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:04.085Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\routing_check-Routing-Acce-f7727-lte-für-Gäste-gesperrt-sein-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                        "column": 16,
+                        "line": 19
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b593a6aa8ce8ecba0bb0-88f86383cc4f5a366788",
+              "file": "routing_check.spec.js",
+              "line": 18,
+              "column": 3
+            },
+            {
+              "title": "Admin-Bereich sollte für Gäste gesperrt sein",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 21,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2537,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js:24:16",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                          "column": 16,
+                          "line": 24
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'Admin-Bereich sollte für Gäste gesperrt sein'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/admin'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[90m// Wir nutzen den Selektor, der in user_roles.spec.js funktioniert\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Administrator-Rechte/i\u001b[39m)\u001b[33m.\u001b[39mor(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/verweigert/i\u001b[39m))\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                            "column": 16,
+                            "line": 24
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m   test(\u001b[32m'Admin-Bereich sollte für Gäste gesperrt sein'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/admin'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[90m// Wir nutzen den Selektor, der in user_roles.spec.js funktioniert\u001b[39m\n \u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Administrator-Rechte/i\u001b[39m)\u001b[33m.\u001b[39mor(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/verweigert/i\u001b[39m))\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 27 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js:24:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:07.943Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\routing_check-Routing-Acce-10995-lte-für-Gäste-gesperrt-sein-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\routing_check.spec.js",
+                        "column": 16,
+                        "line": 24
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b593a6aa8ce8ecba0bb0-d94eb4cb96a7a7206799",
+              "file": "routing_check.spec.js",
+              "line": 23,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ui_consistency.spec.js",
+      "file": "ui_consistency.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "UI Consistency & Shadcn Integration",
+          "file": "ui_consistency.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Login Page should display shadcn card and inputs",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 22,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2537,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js:6:20",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js",
+                          "column": 20,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m     \n \u001b[90m 5 |\u001b[39m     test(\u001b[32m'Login Page should display shadcn card and inputs'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \n \u001b[90m 8 |\u001b[39m         \u001b[36mconst\u001b[39m loginBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Login/i\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m loginBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m     \n \u001b[90m 5 |\u001b[39m     test(\u001b[32m'Login Page should display shadcn card and inputs'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m         \n \u001b[90m 8 |\u001b[39m         \u001b[36mconst\u001b[39m loginBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[35m/Login/i\u001b[39m })\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m         \u001b[36mawait\u001b[39m loginBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js:6:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:11.811Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\ui_consistency-UI-Consiste-0cdb2-play-shadcn-card-and-inputs-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js",
+                        "column": 20,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e5b017c533cd40dc2d1e-15f2c9145871baaf99da",
+              "file": "ui_consistency.spec.js",
+              "line": 5,
+              "column": 5
+            },
+            {
+              "title": "Primary color should be violet-ish",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 23,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2535,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js:23:20",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js",
+                          "column": 20,
+                          "line": 23
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     test(\u001b[32m'Primary color should be violet-ish'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m         \n \u001b[90m 25 |\u001b[39m         \u001b[90m// Check a primary button's computed background color. \u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// We can't easily check HSL values directly as computed styles often return RGB.\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js",
+                            "column": 20,
+                            "line": 23
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m     test(\u001b[32m'Primary color should be violet-ish'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 23 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 24 |\u001b[39m         \n \u001b[90m 25 |\u001b[39m         \u001b[90m// Check a primary button's computed background color. \u001b[39m\n \u001b[90m 26 |\u001b[39m         \u001b[90m// We can't easily check HSL values directly as computed styles often return RGB.\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js:23:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:15.738Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\ui_consistency-UI-Consiste-fc2c3--color-should-be-violet-ish-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js",
+                        "column": 20,
+                        "line": 23
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e5b017c533cd40dc2d1e-fa78ccfca5e1e7a0e36c",
+              "file": "ui_consistency.spec.js",
+              "line": 22,
+              "column": 5
+            },
+            {
+              "title": "Theme toggling should work",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2552,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js:39:20",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js",
+                          "column": 20,
+                          "line": 39
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 37 |\u001b[39m\n \u001b[90m 38 |\u001b[39m     test(\u001b[32m'Theme toggling should work'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m         \n \u001b[90m 41 |\u001b[39m         \u001b[90m// Ensure desktop view to see the header buttons\u001b[39m\n \u001b[90m 42 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetViewportSize({ width\u001b[33m:\u001b[39m \u001b[35m1280\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m720\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js",
+                            "column": 20,
+                            "line": 39
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 37 |\u001b[39m\n \u001b[90m 38 |\u001b[39m     test(\u001b[32m'Theme toggling should work'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m         \n \u001b[90m 41 |\u001b[39m         \u001b[90m// Ensure desktop view to see the header buttons\u001b[39m\n \u001b[90m 42 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39msetViewportSize({ width\u001b[33m:\u001b[39m \u001b[35m1280\u001b[39m\u001b[33m,\u001b[39m height\u001b[33m:\u001b[39m \u001b[35m720\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js:39:20\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:19.675Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\ui_consistency-UI-Consiste-0b2cd--Theme-toggling-should-work-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_consistency.spec.js",
+                        "column": 20,
+                        "line": 39
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "e5b017c533cd40dc2d1e-1cd20a1f4f28035bc9f4",
+              "file": "ui_consistency.spec.js",
+              "line": 38,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ui_interaction.spec.js",
+      "file": "ui_interaction.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Full UI Interaction & Scenarios",
+          "file": "ui_interaction.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User Management - Search and Modal",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 25,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 445,
+                      "error": {
+                        "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                        "stack": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_interaction.spec.js:7:45",
+                        "location": {
+                          "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                          "column": 3001,
+                          "line": 1
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                            "column": 3001,
+                            "line": 1
+                          },
+                          "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\u001b[2m    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\u001b[22m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_interaction.spec.js:7:45\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:23.592Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\ui_interaction-Full-UI-Int-fbb0e-nagement---Search-and-Modal-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                        "column": 3001,
+                        "line": 1
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5de7be04e64d304e2112-2823f127c00752e27e6f",
+              "file": "ui_interaction.spec.js",
+              "line": 13,
+              "column": 5
+            },
+            {
+              "title": "Role Management - Render",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 26,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 460,
+                      "error": {
+                        "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                        "stack": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_interaction.spec.js:7:45",
+                        "location": {
+                          "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                          "column": 3001,
+                          "line": 1
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                            "column": 3001,
+                            "line": 1
+                          },
+                          "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\u001b[2m    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\u001b[22m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_interaction.spec.js:7:45\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:25.374Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\ui_interaction-Full-UI-Int-f3c59-os-Role-Management---Render-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                        "column": 3001,
+                        "line": 1
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5de7be04e64d304e2112-26400c48b13d63f125e6",
+              "file": "ui_interaction.spec.js",
+              "line": 37,
+              "column": 5
+            },
+            {
+              "title": "System Monitor - Charts",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 27,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 462,
+                      "error": {
+                        "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                        "stack": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_interaction.spec.js:7:45",
+                        "location": {
+                          "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                          "column": 3001,
+                          "line": 1
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                            "column": 3001,
+                            "line": 1
+                          },
+                          "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\u001b[2m    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\u001b[22m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_interaction.spec.js:7:45\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:27.197Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\ui_interaction-Full-UI-Int-a35a6-ios-System-Monitor---Charts-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                        "column": 3001,
+                        "line": 1
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5de7be04e64d304e2112-e9a5ae1875b0d6282e60",
+              "file": "ui_interaction.spec.js",
+              "line": 48,
+              "column": 5
+            },
+            {
+              "title": "Dienstplaner - Interaction",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 741,
+                      "error": {
+                        "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                        "stack": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_interaction.spec.js:7:45",
+                        "location": {
+                          "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                          "column": 3001,
+                          "line": 1
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                            "column": 3001,
+                            "line": 1
+                          },
+                          "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\u001b[2m    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\u001b[22m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_interaction.spec.js:7:45\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:29.025Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\ui_interaction-Full-UI-Int-a5b6c--Dienstplaner---Interaction-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                        "column": 3001,
+                        "line": 1
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5de7be04e64d304e2112-689436e71589d6d6c812",
+              "file": "ui_interaction.spec.js",
+              "line": 61,
+              "column": 5
+            },
+            {
+              "title": "Community Wall - Post Interaction",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 29,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 463,
+                      "error": {
+                        "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                        "stack": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_interaction.spec.js:7:45",
+                        "location": {
+                          "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                          "column": 3001,
+                          "line": 1
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                            "column": 3001,
+                            "line": 1
+                          },
+                          "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/api/dev/mock-login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.7632.6 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n\u001b[2m    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\u001b[22m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\ui_interaction.spec.js:7:45\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:31.148Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\ui_interaction-Full-UI-Int-caf9e-ity-Wall---Post-Interaction-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                        "column": 3001,
+                        "line": 1
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5de7be04e64d304e2112-534fc322941598e0ff09",
+              "file": "ui_interaction.spec.js",
+              "line": 80,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "user_roles.spec.js",
+      "file": "user_roles.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Admin Access Security",
+          "file": "user_roles.spec.js",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Benutzerverwaltung für Gäste gesperrt",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2534,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin/users\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin/users\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin/users\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin/users\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\user_roles.spec.js:6:16",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\user_roles.spec.js",
+                          "column": 16,
+                          "line": 6
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test(\u001b[32m'Benutzerverwaltung für Gäste gesperrt'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/admin/users'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Administrator-Rechte/i\u001b[39m)\u001b[33m.\u001b[39mor(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/verweigert/i\u001b[39m))\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\user_roles.spec.js",
+                            "column": 16,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin/users\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin/users\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m   test(\u001b[32m'Benutzerverwaltung für Gäste gesperrt'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/admin/users'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Administrator-Rechte/i\u001b[39m)\u001b[33m.\u001b[39mor(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/verweigert/i\u001b[39m))\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\user_roles.spec.js:6:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:32.977Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\user_roles-Admin-Access-Se-34b4a-rwaltung-für-Gäste-gesperrt-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\user_roles.spec.js",
+                        "column": 16,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6ab7749bfedc38166a5b-aa5e0470ea24f657b001",
+              "file": "user_roles.spec.js",
+              "line": 5,
+              "column": 3
+            },
+            {
+              "title": "Rollenverwaltung für Gäste gesperrt",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2556,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin/roles\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin/roles\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin/roles\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin/roles\", waiting until \"load\"\u001b[22m\n\n    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\user_roles.spec.js:11:16",
+                        "location": {
+                          "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\user_roles.spec.js",
+                          "column": 16,
+                          "line": 11
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m   test(\u001b[32m'Rollenverwaltung für Gäste gesperrt'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/admin/roles'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Administrator-Rechte/i\u001b[39m)\u001b[33m.\u001b[39mor(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/verweigert/i\u001b[39m))\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 13 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\user_roles.spec.js",
+                            "column": 16,
+                            "line": 11
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/admin/roles\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/admin/roles\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  9 |\u001b[39m\n \u001b[90m 10 |\u001b[39m   test(\u001b[32m'Rollenverwaltung für Gäste gesperrt'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 11 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/admin/roles'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 12 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/Administrator-Rechte/i\u001b[39m)\u001b[33m.\u001b[39mor(page\u001b[33m.\u001b[39mgetByText(\u001b[35m/verweigert/i\u001b[39m))\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 13 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\user_roles.spec.js:11:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-14T23:55:37.008Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\test-results\\user_roles-Admin-Access-Se-67d94-rwaltung-für-Gäste-gesperrt-chromium\\test-failed-1.png"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Marcel\\Desktop\\whatsapp-bot\\src\\tests\\e2e\\user_roles.spec.js",
+                        "column": 16,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6ab7749bfedc38166a5b-985d0c362e436c20027b",
+              "file": "user_roles.spec.js",
+              "line": 10,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-02-14T23:45:48.818Z",
+    "duration": 590977.5369999999,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 32,
+    "flaky": 0
+  }
+}

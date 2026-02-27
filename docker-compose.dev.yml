@@ -1,0 +1,73 @@
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: efg_nsu_mongodb_dev
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:27018:27017"
+    volumes:
+      - efg_nsu_mongo_data_dev:/data/db
+
+  meilisearch:
+    image: getmeili/meilisearch:v1.12
+    container_name: efg_nsu_meilisearch_dev
+    restart: unless-stopped
+    environment:
+      - MEILI_ENV=production
+      - MEILI_NO_ANALYTICS=true
+      - MEILI_MASTER_KEY=local-dev-meili-master-key-123456
+    ports:
+      - "127.0.0.1:7701:7700"
+    volumes:
+      - efg_nsu_meili_data_dev:/meili_data
+
+  api:
+    image: node:20
+    container_name: efg_nsu_portal_api_dev
+    restart: unless-stopped
+    working_dir: /app
+    command: sh -lc "npm ci && npm run dev"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - TZ=Europe/Berlin
+      - UPLOADS_DIR=/app/uploads
+      - SEARCH_ENGINE=meilisearch
+      - MEILI_URL=http://meilisearch:7700
+      - MEILI_MASTER_KEY=local-dev-meili-master-key-123456
+      - MONGODB_URI=mongodb://mongodb:27017/efg-nsu-portal-dev
+      - JWT_SECRET=test-secret-key-12345
+      - BASE_URL=http://localhost:3000
+      - DEV_ADMIN_PHONE=+49 1734648795
+      - WHATSAPP_PAIRING_MODE=manual
+    depends_on:
+      - mongodb
+      - meilisearch
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./:/app
+      - ./auth_info:/app/auth_info
+      - ./uploads:/app/uploads
+      - /app/node_modules
+
+  web:
+    image: node:20
+    container_name: efg_nsu_portal_web_dev
+    restart: unless-stopped
+    working_dir: /app/client
+    command: sh -lc "npm ci && npm run dev -- --host 0.0.0.0 --port 5173"
+    environment:
+      - NODE_ENV=development
+      - VITE_API_PROXY_TARGET=http://api:3000
+    depends_on:
+      - api
+    ports:
+      - "127.0.0.1:5173:5173"
+    volumes:
+      - ./:/app
+      - /app/client/node_modules
+
+volumes:
+  efg_nsu_mongo_data_dev:
+  efg_nsu_meili_data_dev:
